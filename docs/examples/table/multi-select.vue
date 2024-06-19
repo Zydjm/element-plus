@@ -29,6 +29,10 @@ interface User {
   name: string
   address: string
 }
+onMounted(() => {
+  multipleTableRef.value.toggleAllSelection()
+});
+
 
 const multipleTableRef = ref<InstanceType<typeof ElTable>>()
 const multipleSelection = ref<User[]>([])
